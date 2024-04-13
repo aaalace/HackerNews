@@ -8,6 +8,8 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  background-color: #e7e7e7;
+  color: #0f0f0f;
 }
 
 a {
