@@ -34,7 +34,7 @@ npm-debug.log
 *.map
 
 # General
-/{{project_name}}-venv/
+/{api}-venv/
 /venv/
 /env/
 /output/
