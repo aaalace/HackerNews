@@ -74,7 +74,7 @@ class GetPostCommentsCountView(APIView):
                 child_comments = Comment.objects.filter(post_id=post_id, parent_id=comment.id)
                 count += child_comments.count()
 
-            return Response({"count": count},
+            return Response(count,
                             status=status.HTTP_200_OK)
         except Exception as e:
             print(e)
