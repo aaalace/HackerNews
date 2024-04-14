@@ -1,0 +1,14 @@
+.header_container{
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  border-bottom: 2px solid #e5e5e5;
+  font-family: 'Ravie', serif;
+  font-size: 32px;
+}

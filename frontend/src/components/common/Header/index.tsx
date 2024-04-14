@@ -1,7 +1,9 @@
+import styles from "./header.module.css"
+
 export function Header() {
     return (
-        <div>
-            <p>Header</p>
+        <div className={styles.header_container}>
+            Hacker News
         </div>
     )
 }

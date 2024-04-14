@@ -1,5 +1,5 @@
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import {IComment} from "../../@types/comment";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { IComment } from "../../@types/comment";
 
 type ChildCommentIds = {
     postId: string,

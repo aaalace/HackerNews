@@ -1,5 +1,5 @@
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
-import {IPost} from "../../@types/post";
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { IPost } from "../../@types/post";
 
 export const postsApi = createApi({
     reducerPath: 'posts',
@@ -11,8 +11,8 @@ export const postsApi = createApi({
     tagTypes: ["POST"],
 
     endpoints: (builder) => ({
-        getPosts: builder.query<IPost[], void>({
-            query: () => "/",
+        getPosts: builder.query<IPost[], any>({
+            query: (_: any) => "/",
             providesTags: ["POST"],
         }),
         getPostById: builder.query<IPost, string>({
@@ -24,5 +24,5 @@ export const postsApi = createApi({
 
 export const {
     useGetPostsQuery,
-    useGetPostByIdQuery
+    useGetPostByIdQuery,
 } = postsApi;

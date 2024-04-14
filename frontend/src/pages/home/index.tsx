@@ -1,16 +1,28 @@
-import {useGetPostsQuery} from "../../store/api/posts-api.ts";
-import {Link} from "react-router-dom";
+import { useGetPostsQuery } from "../../store/api/posts-api.ts";
+import { HeadPost } from "../../components/home/head-post";
+import { Post } from "../../components/home/post"
+import styles from "./home.module.css"
+import { Panel } from "../../components/home/panel";
 
 export function Home() {
-    const posts = useGetPostsQuery().data;
+    const {
+        data: posts,
+        refetch: refetchPosts,
+    }  = useGetPostsQuery(null, {
+        pollingInterval: 60000,
+        skipPollingIfUnfocused: true,
+    });
 
     return (
-        <div>
+        <div className={styles.home_container}>
+            <Panel upd={refetchPosts}/>
             {posts ? (
-                posts.map(post => <Link key={post.id} to={`/post/${post.id}`}><p>{post.name}</p></Link>)
-            ) : (
-                "Post were not added yet, sorry"
-            )}
+                <div>
+                    <HeadPost post={posts[0]}/>
+                    {posts.slice(1).map(post => <Post key={post.id} post={post}/>)}
+                </div>
+            ) : null
+            }
         </div>
     )
 }
