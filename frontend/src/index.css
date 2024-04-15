@@ -1,8 +1,6 @@
-@import '@fontsource/roboto/index.css';
-
 :root {
   color-scheme: light dark;
-  font-family: "Roboto", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif ;
 }
 
 body {
