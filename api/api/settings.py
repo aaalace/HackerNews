@@ -6,9 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+5+=w8e3c!5dttg6c@$n%2qizv5*z$d*$q#7hnnf!ywmoru#hr'
 
 # Make sure debug mode is off
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 ROOT_URLCONF = 'api.urls'
 
