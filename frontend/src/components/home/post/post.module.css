@@ -31,7 +31,12 @@
 }
 
 .p2 {
-  font-size: 30px;
+  font-size: 22px;
+  line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  max-height: 80px;
 }
 
 .p3 {
