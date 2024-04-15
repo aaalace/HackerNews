@@ -2,7 +2,7 @@
   width: 70vw;
   /*border: 1px solid black;*/
   height: 500px;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);

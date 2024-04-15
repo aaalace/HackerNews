@@ -1,7 +1,11 @@
 import { Outlet } from "react-router-dom";
+import { Header } from "../header";
 
 export function RouterWrapper() {
     return (
-        <Outlet/>
+        <div>
+            <Header/>
+            <Outlet/>
+        </div>
     )
 }

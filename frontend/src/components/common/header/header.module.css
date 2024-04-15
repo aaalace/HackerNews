@@ -1,4 +1,4 @@
-.header_container{
+.header_container {
   width: 100vw;
   height: 80px;
   display: flex;
@@ -11,4 +11,8 @@
   border-bottom: 2px solid #e5e5e5;
   font-family: 'Ravie', serif;
   font-size: 32px;
+}
+
+.header_container p {
+  user-select: none;
 }

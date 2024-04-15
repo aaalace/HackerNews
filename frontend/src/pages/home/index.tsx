@@ -8,14 +8,16 @@ export function Home() {
     const {
         data: posts,
         refetch: refetchPosts,
-    }  = useGetPostsQuery(null, {
+    } = useGetPostsQuery(null, {
         pollingInterval: 60000,
         skipPollingIfUnfocused: true,
     });
 
     return (
         <div className={styles.home_container}>
-            <Panel upd={refetchPosts}/>
+            <div className={styles.panel_container}>
+                <Panel upd={refetchPosts} title="Recent news"/>
+            </div>
             {posts ? (
                 <div>
                     <HeadPost post={posts[0]}/>

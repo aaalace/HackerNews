@@ -2,8 +2,8 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { IComment } from "../../@types/comment";
 
 type ChildCommentIds = {
-    postId: string,
-    rootId: string
+    postId: number,
+    commentId: number
 }
 
 export const commentsApi = createApi({
@@ -21,7 +21,7 @@ export const commentsApi = createApi({
             providesTags: ["COMMENT"],
         }),
         getRootChildComment: builder.query<IComment[], ChildCommentIds>({
-            query: (ids: ChildCommentIds) => `/${ids.rootId}/${ids.postId}`,
+            query: (ids: ChildCommentIds) => `/${ids.postId}/${ids.commentId}`,
             providesTags: ["COMMENT"],
         }),
         getPostCommentsCount: builder.query<number, string>({
