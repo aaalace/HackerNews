@@ -1,8 +1,5 @@
 *.pyc
-db.sqlite3
-db.sqlite3-journal
 .DS_Store
-.env
 **/settings/local.py
 /staticfiles/*
 /mediafiles/*
@@ -36,7 +33,6 @@ npm-debug.log
 # General
 /{api}-venv/
 /venv/
-/env/
 /output/
 /cache/
 boilerplate.zip
