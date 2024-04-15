@@ -1,6 +1,5 @@
 .container {
   width: 70vw;
-  /*border: 1px solid black;*/
   height: 300px;
   padding: 20px;
   display: grid;
@@ -72,10 +71,15 @@
 }
 
 .rating_icon {
-  padding-right: 7px;
+  padding-right: 5px;
 }
 
 .image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #a8a8a8;
   height: 100%;
   grid-area: 1 / 1 / 6 / 3;
 }

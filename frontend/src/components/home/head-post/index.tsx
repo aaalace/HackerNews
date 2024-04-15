@@ -3,6 +3,7 @@ import { IPost } from "../../../@types/post";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { getDateFormatted } from "../../../utils/getDateFormatted.ts";
 
 
 type HeadPostProp = {
@@ -15,7 +16,7 @@ export function HeadPost({post}: HeadPostProp) {
             <div className={styles.data}>
                 <div className={styles.initData}>
                     <p className={styles.p1}>
-                        {post.date.split('T')[0]} | {post.date.split('T')[1].slice(0, -1)}
+                        {getDateFormatted(post.date)}
                     </p>
                     <p className={styles.p2}>{post.name}</p>
                     <hr/>

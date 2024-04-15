@@ -55,6 +55,7 @@
   background-color: #333333;
   padding: 5px 10px;
   box-shadow: -8px 5px 10px #5d5d5d;
+  border: 1px solid #252525;
 }
 
 .goto_button:hover {
@@ -70,7 +71,7 @@
 }
 
 .rating_icon {
-  padding-right: 7px;
+  padding-right: 5px;
 }
 
 .image_container {
